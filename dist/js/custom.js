@@ -157,21 +157,6 @@
 	});
   
   }).call(this);
-
-//   fancybox
-$('[data-fancybox="images"]').fancybox({
-	buttons : [ 
-	  'slideShow',
-	  'share',
-	  'zoom',
-	  'fullScreen',
-	  'close'
-	],
-	thumbs : {
-	  autoStart : true
-	}
-  });
-
   //imageloaded
   $('#container').imagesLoaded()
   .always( function( instance ) {

@@ -17,17 +17,13 @@ exports.default = () => (
       .pipe(gulp.dest('dist/css-minify'))
 );
 /// 1 css minify
-gulp.task('css', function () {
-    gulp.src('./dist/css/*.css')
-      .pipe(uglifycss({
-        "maxLineLen": 80,
-        "uglyComments": true
-      }))
-      .pipe(gulp.dest('dist/css-minify/'));
-  });
   /// gulp-concat-css
   gulp.task('css', function () {
     return gulp.src('./dist/css/*.css')
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+       }))
       .pipe(concat("main.css"))
       .pipe(gulp.dest('dist/css-minify'));
 });
